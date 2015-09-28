@@ -1,4 +1,6 @@
 %h2 welcome to bryce phoenix twitter
 %ul
   - for status <- @statuses do
-    %li= status.body
+    %li
+      .content= status.body
+      .posted_at= status.inserted_at
