@@ -1,0 +1,13 @@
+<h2>Show status</h2>
+
+<ul>
+
+  <li>
+    <strong>Body:</strong>
+    <%= @status.body %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: status_path(@conn, :edit, @status) %>
+<%= link "Back", to: status_path(@conn, :index) %>
