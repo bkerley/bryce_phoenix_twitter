@@ -16,7 +16,7 @@ defmodule BrycePhoenixTwitter.Router do
   scope "/", BrycePhoenixTwitter do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", HomepageController, :index
 
     resources "/statuses", StatusController
   end
