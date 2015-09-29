@@ -22,7 +22,7 @@ defmodule BrycePhoenixTwitter.StatusController do
       {:ok, _status} ->
         conn
         |> put_flash(:info, "Status created successfully.")
-        |> redirect(to: status_path(conn, :index))
+        |> redirect(to: homepage_path(conn, :index))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
