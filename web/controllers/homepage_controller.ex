@@ -8,6 +8,7 @@ defmodule BrycePhoenixTwitter.HomepageController do
     statuses = Repo.all(Status
                         |> order_by([status], desc: status.inserted_at)
     )
-    render(conn, "index.html", statuses: statuses)
+    new_status = Status.changeset(%Status{})
+    render(conn, "index.html", statuses: statuses, new_status: new_status)
   end
 end
