@@ -11,4 +11,4 @@
   - for status <- @statuses do
     %li
       .content= status.body
-      .posted_at= status.inserted_at
+      .posted_at= link Ecto.DateTime.to_string(status.inserted_at), to: status_path(@conn, :show, status)
